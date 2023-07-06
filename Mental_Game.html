@@ -1,0 +1,758 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>First Page</title>
+<style>
+*{
+    padding:0;
+    margin:0;
+}
+body
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+#main_container
+{
+    background-color: black;
+    width:100%;
+    text-align: center;
+    height:auto;  
+}
+
+.container
+{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: black;
+    width:100%;
+    text-align: center;
+    height:auto;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#btn1
+{
+    width: 70%;
+    height:2em;
+    border-radius: 50px;
+    border:2px solid blue;
+    color:red;
+    box-shadow: 1px 1px 50px 4px blue;
+    font-size: 5vw;
+    background-color: aqua;
+    text-align: center;
+    justify-content: center;
+    margin-top:5%;
+    margin-bottom: 10%;
+    display:;
+    
+    min-height: 10%;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+p
+{
+    color:yellow;
+    font-size: 10vw;
+    margin-top: 5%;
+}
+span{
+    color:red;
+}
+
+img
+{
+    width:70%;
+    height:60%;
+    margin-bottom: 5%;
+    border:;
+}
+
+
+input,select
+{
+    width:95%;
+    height:2em;
+    border-radius: 50px;
+    color:yellow;
+    text-align: center;
+    font-size: 5vw;
+    min-height:10%;
+     background-color: #202020;
+    border:2px solid blue;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+label
+{
+    color:white;
+    border-bottom: 2px solid red;
+    width:95%;
+    height:2em;
+    margin-top: 5%;
+    
+    font-size: 5vw;
+    margin-top:10%;
+    margin-bottom:5%;
+}
+
+#label_choice1
+{
+    font-size: 8vw;
+}
+
+#option2,#option1,#ch_submit
+{
+    height:3em;
+    font-size: 10vw;
+}
+#ch_submit
+{
+    color:red;
+    border: 2px solid blue;
+    box-shadow: 0px 0px 10px 10px red;
+}
+
+
+#choice_container
+{
+    position: absolute;
+    top:20%;    
+}
+
+#choice_container2
+{
+    position: absolute;
+    top:15%;    
+}
+
+#submit
+{
+    color:red;
+    border:2px solid green;
+    margin-top: 5%;
+    
+    height: 2em;
+    box-shadow: 2px 2px 10px 4px green;
+}
+
+select
+{
+    text-align-last: center;
+}
+
+
+#Circle
+{
+    width:60%;
+    height:60%;
+    border-radius: 50%;
+    text-align:center;
+    
+    
+    margin-left: 20%;
+    margin-top: 5%;
+    border: 2px solid white;
+    animation:border 10s linear infinite;
+}
+
+@keyframes border
+{
+    10%{box-shadow: 0px 0px 10px 4px red;}
+    20%{box-shadow: 0px 0px 10px 4px yellow;}
+    30%{box-shadow: 0px 0px 10px 4px orange;}
+    40%{box-shadow: 0px 0px 10px 4px blue;}
+    50%{box-shadow: 0px 0px 10px 4px green;}
+    60%{box-shadow: 0px 0px 10px 4px white;}
+    70%{box-shadow: 0px 0px 10px 4px violet;}
+    80%{box-shadow: 0px 0px 10px 4px teal;}
+    90%{box-shadow: 0px 0px 10px 4px turquoise;}
+    100%{box-shadow: 0px 0px 10px 4px rebeccapurple;}
+}
+#Circle span
+{
+    display: inline-block;
+    color:red;
+    
+    font-size: 15vw;
+    
+    text-align: center;
+    
+    position: relative;
+    top:50%;
+    transform:translateY(-50%);
+    
+}
+#btn
+{
+    color:red;
+    font-size: 5vw;
+    margin-top: 10%;
+    text-transform:uppercase ;
+    background-color:black;
+    width:70%;
+    height:2em;
+    min-height: 10%;
+    border-radius: 50px;
+    cursor: pointer;
+    text-align: center;
+    box-shadow: 0px 0px 10px 5px red;
+    display: ;
+    
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+#btn2
+{
+    color:red;
+    font-size: 5vw;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    text-transform:uppercase ;
+    background-color:black;
+    width:70%;
+    min-height: 10%;
+    text-align: center;
+    height:2em;
+    
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 5px red;
+    display: ;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+#text
+{
+    color:yellowgreen;
+    font-size: 7vw;
+
+}
+
+
+/*Proocessing bar style Starting*/
+
+.progress_bar
+{
+    margin-top: 10%;
+    position: relative;
+    width:70%;
+    height:2.5em;
+    font-size: 5vw;
+    border-radius: 1.5em;
+    text-transform:uppercase ;
+    margin-left: 15%;
+    text-align: center;
+    border:2px solid red;
+    box-shadow: 0px 0px 10px 5px red;
+    color:white;
+    background-color: black;
+}
+.progress_bar::before
+{
+    content: '';
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    
+    height:1.5em;
+    left:0.5em;
+    text-align: center;
+    top:0.4em;
+    width:calc(var(--width,0)*1%);
+    min-width: 0;
+    border-radius: 1em;
+    padding:1;
+    max-width: calc(100% - 1em);
+    background-color: blue;
+}
+
+.progress_bar::after
+{
+    content:'Loading....';
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    color:yellow;
+    position:absolute;
+    top:0.7em;
+    left:25%;
+}
+
+/*Proocessing bar style Ending*/
+</style>
+
+</head>
+<body>
+ <div id="main_container"> 
+    <div class="container">
+        <p>
+            <span>B</span>RAIN <span>E</span>XERCISE
+        </p>    
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT5A6Hr2fsMT-RARW81Ud5Ei2JKG8sFVPcm1uf8bEBYo4ZJI5RMw&s"/>    
+       <button id="btn1" onclick="Select_opration()"  onselect="">Play Now</button>  
+    </div>        
+</div> 
+ <script>
+
+     var subtract=false;
+     var decide_option;
+     var range_of_number;
+     var ch=0;
+    
+     function Select_opration()
+     {
+        document.getElementById('main_container').innerHTML='';
+        document.getElementById('main_container').innerHTML="<div class='container' id='choice_container' ><label id='label_choice1'>What You Want To Do</label><select id='option1' onchange='option_change()'><option value='Addition'>Addition</option> <option value='Subtract'>Subtraction</option> <option value='Cube'>Cubing</option> <option value='Square'>Squaring</option> <option value='Square_root'>Perfect Square_Root</option> <option value='Cube_Root'>Perfect Cube_Root</option> <option value='Non-Perfect Cube_Root'>Non-Perfect Cube_Root</option>  <option value='Non-Perfect Square_Root'>Non-Perfect Square_Root</option> </select>     <input type='submit' onclick='decide1()' value='Play' id='ch_submit'>    </div>";    
+        Bg_sound1.play();
+        Bg_sound1.loop=true;
+     }
+
+    
+     function option_change()
+     {
+        let choice=document.getElementById('option1').value;
+     
+        if(choice=='Addition')
+        {
+            decide_option=document.getElementById('option1').value;
+            
+        }
+        else if(choice=='Subtract')
+        {
+            decide_option=document.getElementById('option1').value;
+          
+        }
+        else
+        {
+        decide_option=document.getElementById('option1').value;    
+        document.getElementById('main_container').innerHTML='';
+        document.getElementById('main_container').innerHTML="<div class='container' id='choice_container2' > <label id='label_choice1'>Select Range</label> <select id='option2'> <option value='10'>Upto 10</option> <option value='20'>Upto 20</option> <option value='30'>Upto 30</option> <option value='40'>Upto 40</option> <option value='50'>Upto 50</option> <option value='60'>Upto 60</option> <option value='70'>Upto 70</option> <option value='80'>Upto 80</option> <option value='90'>Upto 90</option> <option value='100'>Upto 100</option> <option value='1000'>Upto 1000</option> </select>   <input type='submit' onclick='decide2()' value='Play' id='ch_submit'>    </div>";
+        ch=1;
+        }
+        
+     }
+
+     function decide1()
+     {
+        if(ch==0)
+        {
+            decide_option=document.getElementById('option1').value;
+            decide();
+        }
+     }
+
+     function decide2()
+     {
+        if(ch==1)
+        {
+            range_of_number=document.getElementById('option2').value;
+            decide();
+        }
+     }
+
+
+
+     function decide()
+     
+     {
+             
+        if(decide_option=='Cube')
+        {
+            cube()
+        }
+        else if(decide_option=='Square')
+        {
+            sq()
+        }
+        else if(decide_option=='Addition')
+        {
+            Play_Now();
+        }
+
+        
+
+        else if(decide_option=='Subtract')
+        {
+           Play_Now(); 
+           subtract=true;
+        }
+        else if(decide_option=='Cube_Root')
+        {
+           Cube_Root(); 
+        }
+        else if(decide_option=='Square_Root')
+        {
+           Square_Root(); 
+        }
+        
+        else if(decide_option=='Non-Perfect Square_Root')
+        {
+            Non_Perfect_Square_Root(); 
+        }
+
+        else if(decide_option=='Non-Perfect Cube_Root')
+        {
+           Non_Perfect_Cube_Root(); 
+        }
+
+     }
+
+     
+
+
+     function Play_Now()
+     {
+       
+         /*alert('Ohh You Hurt Me!!');*/
+        document.getElementById('main_container').innerHTML='';
+        document.getElementById('main_container').innerHTML="<div class='container' ><label>Number Of Digits</label><select id='digits'><option value='10'>1</option> <option value='100'>2</option> <option value='1000'>3</option> <option value='10000'>4</option>  </select>       <label>How Many Number</label>        <input type='number' min='1' placeholder='How many number' id='Number' required/>   <label>Speed Of Numbers</label>  <select id='speed'> <option value='6'>Very Slow</option> <option value='5'>Slow</option>  <option value='4'>Modarate</option> <option value='3'>Fast</option>    <option value='2'>Very Fast</option> </select>   <input type='submit' onclick='play()' value='Play' id='submit'>    </div>";
+        
+     }
+         
+     var no_of_digit;    
+     var how_many_number;
+     var calculation_time;
+        
+
+     function play()
+    {
+        no_of_digit=document.getElementById('digits').value;    
+        how_many_number=document.getElementById('Number').value;
+        calculation_time=document.getElementById('speed').value;
+        /*alert(no_of_digit);
+        alert(how_many_number);
+        alert(calculation_time);*/
+        document.getElementById('main_container').innerHTML='';
+        document.getElementById('main_container').innerHTML="<div class='container'> <span id='text'></span> <div id='Circle'> <span id='shown_number'>Go!!</span> </div> <button id='btn' onclick='start()'><span id='button'>Start</span></button>  <div id='New_Game'></div> </div>";
+        
+    }        
+    
+    
+    var btn=1;
+    var number=[];
+    
+    
+    
+    
+        async function start()
+        {
+            var a=4;
+            
+            if(how_many_number>=1)
+            {
+                a=how_many_number;
+            }
+            
+            
+            
+            
+            
+            var digits_no=no_of_digit;
+            var rest_time=calculation_time;
+    
+                    
+            if(digits_no==10)
+            {
+                var digits_add_no=1;
+                digits_no=9;
+            }
+            else if(digits_no==100)
+            {
+                var digits_add_no=10;
+                digits_no=90;
+            }
+            else if(digits_no==1000)
+            {
+                var digits_add_no=100;
+                digits_no=900;
+            }
+            else if(digits_no==10000)
+            {
+                var digits_add_no=1000;
+                digits_no=9000;
+            }
+            else
+            {
+                var digits_add_no=1;
+                digits_no=9;
+            }
+            
+
+
+            if(btn==1)
+        {
+            
+            btn=0;
+            document.getElementById('main_container').innerHTML='';
+            document.getElementById('main_container').innerHTML="<div class='container'> <span id='text'></span> <div id='Circle'> <span id='shown_number'>Go!!</span> </div>  <div id='Processing'></div> <div id='New_Game'></div> </div>";
+        
+
+            document.getElementById('New_Game').innerHTML='';
+            document.getElementById('text').innerHTML='Add In Your Mind';
+            //document.getElementById('button').innerHTML='Processing....';
+            
+            document.getElementById('Processing').innerHTML="<div class='progress_bar' style='--width:0;' data-label='Loading...'></div>";
+            //processing bar 
+            //alert(rest_time);
+            //alert(a);
+            const progress_bar=document.getElementsByClassName('progress_bar')[0]
+            setInterval(() =>{
+                const computedstyle=getComputedStyle(progress_bar)
+                const width = parseFloat(computedstyle.getPropertyValue('--width')) || 0
+                progress_bar.style.setProperty('--width',width + 1);
+            },rest_time*a*10+(a)*10 - 0.1)
+            //Processing bar ending
+            
+            
+            var digits=2;
+            for(let i=0;i<a;i++)
+            {
+                if(subtract==true)
+                {
+                   
+                   let sign=Math.floor(Math.random()*2); 
+                   
+                   if(sign==0)
+                   {
+                    var num=Math.floor(Math.random()*(-1*digits_no)-digits_add_no);
+                   }
+                   else if(sign==1)
+                   {
+                    var num=Math.floor(Math.random()*digits_no+digits_add_no);
+                   }
+
+                }
+
+                else 
+                {
+                var num=Math.floor(Math.random()*digits_no+digits_add_no);
+                }
+
+
+
+                number[i]=num;    
+
+                document.getElementById('shown_number').innerHTML='';
+                await sleep(1000);
+                document.getElementById('shown_number').innerHTML=num;
+                await sleep(rest_time*1000);
+
+                
+            
+            }
+            
+            document.getElementById('main_container').innerHTML='';
+            document.getElementById('main_container').innerHTML="<div class='container'> <span id='text'></span> <div id='Circle'> <span id='shown_number'>Go!!</span> </div> <button id='btn' onclick='start()'><span id='button'>Start</span></button>  <div id='New_Game'></div> </div>";
+        
+            document.getElementById('text').innerHTML='';
+            document.getElementById('text').innerHTML='MATCH YOUR SUM';
+            document.getElementById('shown_number').innerHTML='???';
+            document.getElementById('button').innerHTML='Check Result';
+            
+            btn=2;
+        
+        }  
+
+
+
+            else if(btn==2)   //showing the final sum of numbers to user
+            {
+                    
+                    var sum=0;
+                    for(let i=0;i<a;i++)
+                    {
+                        sum=sum+number[i];
+                        
+                    }
+                    document.getElementById('shown_number').innerHTML='';
+                    document.getElementById('shown_number').innerHTML=sum;
+                    document.getElementById('button').innerHTML='Play Again';
+                   /* var Play_again = document.createElement('div');
+                    Play_again.innerHTML="<button id='btn2' onclick='location.reload()'><span id='button'>New Game</span></button>";
+                    */
+                    document.getElementById('New_Game').innerHTML="<button id='btn2' onclick='location.reload()'><span id='button'>New Game</span></button>";
+                    btn=1;
+                }
+
+         }
+
+    
+    
+        function sleep(ms)
+        {
+            return new Promise(resolve => setTimeout(resolve,ms));
+        }
+
+        var square_result;
+        var result_value;
+        var a;
+        
+        var opration;  
+
+        function cube()
+        {
+            opration='cube';
+            evaluate();
+        }
+       
+        function sq()
+        {
+            opration='square';
+            evaluate();
+        }
+
+        function Cube_Root()
+        {
+            opration='Cube_Root';
+            evaluate();
+        }
+
+        function Square_Root()
+        {
+            opration='Square_Root';
+            evaluate();
+        }
+
+        function Non_Perfect_Square_Root()
+        {
+            opration='Non_Perfect_Square_Root';
+            evaluate();
+        }
+
+        function Non_Perfect_Cube_Root()
+        {
+            opration='Non_Perfect_Cube_Root';
+            evaluate();
+        }
+
+
+       /* In a function */
+       
+       function evaluate()
+       {
+        document.getElementById('main_container').innerHTML='';
+        document.getElementById('main_container').innerHTML="<div class='container'> <span id='text'></span> <div id='Circle'> <span id='shown_number'>Go!!</span> </div> <button id='btn' onclick='square()'><span id='button'>Start</span></button> <div id='New_Game'></div> </div>";
+       } 
+
+       async function square()
+       {
+            a=range_of_number;
+            
+            var random=Math.floor(Math.random()*a +1) ;
+           
+            document.getElementById('main_container').innerHTML='';
+            document.getElementById('main_container').innerHTML="<div class='container'><span id='text'></span> <div id='Circle'> <span id='shown_number'>Go!!</span> </div>  <div id='Processing'></div> <div id='New_Game'></div> </div>";
+           
+           
+            if(opration=='square')
+            {
+            square_result=random*random;   
+            document.getElementById('text').innerHTML='';
+            document.getElementById('text').innerHTML='Find Square';
+
+            }        
+            else if(opration=='cube')
+            {
+            square_result=random*random*random;   
+            document.getElementById('text').innerHTML='';
+            document.getElementById('text').innerHTML='Find Cube';
+            }
+            
+            else if(opration=='Cube_Root')
+            {
+            square_result=random;   
+            random=random*random*random;
+            document.getElementById('text').innerHTML='';
+            document.getElementById('text').innerHTML='Find Cube Root';
+            }
+            
+            else if(opration=='Square_Root')
+            {
+            square_result=random;   
+            random=random*random;
+            document.getElementById('text').innerHTML='';
+            document.getElementById('text').innerHTML='Find Square Root';
+            }
+
+            else if(opration=='Non_Perfect_Square_Root')
+            {
+            square_result=Math.sqrt(random).toFixed(3);   
+            document.getElementById('text').innerHTML='';
+            document.getElementById('text').innerHTML='Find Square Root';
+            }
+
+            else if(opration=='Non_Perfect_Cube_Root')
+            {
+            square_result=Math.cbrt(random).toFixed(3);   
+            document.getElementById('text').innerHTML='';
+            document.getElementById('text').innerHTML='Find Cube Root';
+            }
+
+
+            document.getElementById('shown_number').innerHTML='';
+           // document.getElementById('button').remove;
+            document.getElementById('Processing').innerHTML="<div class='progress_bar' style='--width:0;' data-label='Loading...'></div>";
+            //processing bar 
+            const progress_bar=document.getElementsByClassName('progress_bar')[0]
+            setInterval(() =>{
+                const computedstyle=getComputedStyle(progress_bar)
+                const width = parseFloat(computedstyle.getPropertyValue('--width')) || 0
+                progress_bar.style.setProperty('--width',width + 1);
+            },40)
+            //Processing bar ending
+            
+            
+            
+            await sleep(1000);          
+            
+            document.getElementById('shown_number').innerHTML=random;
+            
+                   
+            await sleep(3000);          
+            
+            document.getElementById('main_container').innerHTML="<div class='container'><span id='text'></span> <div id='Circle'> <span id='shown_number'>Go!!</span> </div> <button id='btn'  onclick='square_result1()'><span id='button'>Start</span></button> <div id='New_Game'></div> </div>";
+            document.getElementById('shown_number').innerHTML='???';
+            document.getElementById('button').innerHTML='Check Result';
+
+            document.getElementById('text').innerHTML='';
+            document.getElementById('text').innerHTML='MATCH YOUR RESULT';
+            
+                   
+       } 
+
+       function square_result1()
+       {
+        document.getElementById('main_container').innerHTML="<div class='container'> <span id='text'></span> <div id='Circle'> <span id='shown_number'>Go!!</span> </div> <button id='btn' onclick='square()'><span id='button'>Start</span></button> <div id='New_Game'></div> </div>";  
+        document.getElementById('text').innerHTML='';
+        document.getElementById('text').innerHTML='Creator Harsh';
+            
+        document.getElementById('shown_number').innerHTML=square_result; 
+        document.getElementById('button').innerHTML='Play Again';
+        document.getElementById('New_Game').innerHTML="<button id='btn2' onclick='location.reload()'><span id='button'>New Game</span></button>";
+                   
+       }
+       /*Background Music*/ 
+       const Bg_sound1=new Audio('http://freesoundeffect.net/sites/default/files/video-game-underwater-background-ambiance-sound-effect-52438355.mp3');
+       
+
+
+ </script>   
+</body>
+</html>
